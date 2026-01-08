@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="/public/css/user.css" />
+</head>
+
+<body>
+    <div class="page-wrap fade">
+    <header class="u-header">
+        <div class="logo">GOGGLES®</div>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/shop">Shop</a>
+            <a href="/cart" class="cart-link">
+                Cart
+                <span id="cartCount" class="cart-badge">0</span>
+            </a>
+        </nav>
+    </header>
+
+    <section class="cart-wrap">
+        <h1>Your Selection</h1>
+
+        <div class="cart-grid">
+            <!-- LEFT: ITEMS -->
+            <div class="cart-items">
+                <div id="cartList"></div>
+
+                <p id="emptyCart" class="empty-cart">
+                    Your cart is currently empty.
+                </p>
+            </div>
+
+            <!-- RIGHT: SUMMARY -->
+            <div class="cart-summary">
+                <h3>Order Summary</h3>
+
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span>₹<span id="subTotal">0</span></span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span>Free</span>
+                </div>
+
+                <div class="summary-total">
+                    <span>Total</span>
+                    <span>₹<span id="grandTotal">0</span></span>
+                </div>
+
+                <a href="/checkout" id="checkoutBtn" class="btn-primary">
+                    Proceed to Checkout
+                </a>
+
+                <p class="trust-note">
+                    Secure checkout • Free returns • Premium support
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="u-footer">
+        <p>© 2026 GOGGLES®. Designed with precision.</p>
+    </footer>
+</div>
+    <script src="/public/js/cart.js"></script>
+</body>
+
+</html>

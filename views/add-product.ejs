@@ -1,0 +1,49 @@
+<h1>Add Product</h1>
+
+<div class="form-card">
+  <div class="form-grid">
+    <div>
+      <label>Product Name</label>
+      <input type="text" id="name" placeholder="Aviator Sunglasses">
+    </div>
+
+    <div>
+      <label>Price</label>
+      <input type="number" id="price" placeholder="1999">
+    </div>
+
+    <div>
+      <label>Brand</label>
+      <input type="text" id="brand" placeholder="RayBan">
+    </div>
+
+    <div>
+      <label>Stock</label>
+      <input type="number" id="stock" placeholder="10">
+    </div>
+
+    <div>
+      <label>Category</label>
+      <input type="text" id="category" placeholder="Sunglasses">
+    </div>
+
+    <div>
+      <label>Image URL</label>
+      <input type="text" id="image" placeholder="https://...">
+    </div>
+
+    <div class="full">
+      <label>Description</label>
+      <textarea id="description" rows="4" placeholder="UV protected goggles"></textarea>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button id="saveProductBtn">Save Product</button>
+    <a href="/admin/products" class="btn-secondary">Cancel</a>
+  </div>
+
+  <p id="msg" class="msg"></p>
+</div>
+
+<script src="/public/js/add-product.js"></script>

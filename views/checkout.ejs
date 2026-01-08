@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>
+    <%= title %>
+  </title>
+  <link rel="stylesheet" href="/public/css/user.css" />
+</head>
+
+<body>
+<div class="page-wrap fade">
+  <header class="u-header">
+    <div class="logo">GOGGLES®</div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/shop">Shop</a>
+      <a href="/cart" class="cart-link">
+        Cart
+        <span id="cartCount" class="cart-badge">0</span>
+      </a>
+    </nav>
+  </header>
+
+  <section class="checkout-wrap">
+    <h1>Secure Checkout</h1>
+    <p class="checkout-sub">
+      Complete your purchase with confidence. Your information is protected.
+    </p>
+
+    <div class="checkout-grid">
+      <!-- LEFT -->
+      <div class="checkout-left">
+
+        <div class="checkout-card">
+          <h3>Customer Details</h3>
+
+          <div class="form-grid">
+            <div>
+              <label>Full Name</label>
+              <input type="text" id="name" placeholder="Your name">
+            </div>
+
+            <div>
+              <label>Email Address</label>
+              <input type="email" id="email" placeholder="you@email.com">
+            </div>
+          </div>
+        </div>
+
+        <div class="checkout-card">
+          <h3>Order Summary</h3>
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Qty</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody id="cartTable"></tbody>
+          </table>
+
+          <div class="summary-total">
+            <span>Total</span>
+            <span>₹<span id="total"></span></span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT -->
+      <div class="checkout-right">
+        <div class="checkout-card highlight">
+          <h3>Payment</h3>
+
+          <button id="payBtn" class="btn-primary full">
+            Pay Securely
+          </button>
+
+          <div class="trust-badges">
+            <span>🔒 256-bit SSL Secure</span>
+            <span>↩ 7-Day Returns</span>
+            <span>📞 Premium Support</span>
+          </div>
+
+          <p class="checkout-note">
+            Payments are processed securely via trusted gateways.
+            We never store your card details.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="u-footer">
+    <p>© 2026 GOGGLES®. Secure payments. Timeless design.</p>
+  </footer>
+  </div>
+
+  <!-- Razorpay -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script src="/public/js/check

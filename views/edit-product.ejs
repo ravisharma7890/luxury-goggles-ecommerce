@@ -1,0 +1,71 @@
+<h1 class="page-title">Edit Product</h1>
+<p class="page-subtitle">Update product information carefully</p>
+
+<div class="form-wrapper">
+
+  <!-- SECTION: BASIC INFO -->
+  <div class="form-section">
+    <h3>Basic Information</h3>
+
+    <div class="form-grid">
+      <div>
+        <label>Product Name</label>
+        <input type="text" id="name">
+      </div>
+
+      <div>
+        <label>Category</label>
+        <input type="text" id="category">
+      </div>
+
+      <div>
+        <label>Brand</label>
+        <input type="text" id="brand">
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION: PRICING -->
+  <div class="form-section">
+    <h3>Pricing & Inventory</h3>
+
+    <div class="form-grid">
+      <div>
+        <label>Price (₹)</label>
+        <input type="number" id="price">
+      </div>
+
+      <div>
+        <label>Stock</label>
+        <input type="number" id="stock">
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION: MEDIA -->
+  <div class="form-section">
+    <h3>Media</h3>
+
+    <div class="form-grid">
+      <div class="full">
+        <label>Image URL</label>
+        <input type="text" id="image">
+      </div>
+
+      <div class="full">
+        <label>Description</label>
+        <textarea id="description" rows="4"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACTIONS -->
+  <div class="form-actions">
+    <button id="updateBtn" class="btn-primary">Update Product</button>
+    <a href="/admin/products" class="btn-secondary">Cancel</a>
+  </div>
+
+  <p id="msg" class="form-msg"></p>
+</div>
+
+<script src="/public/js/edit-product.js"></script>

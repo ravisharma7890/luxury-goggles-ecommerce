@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/public/css/admin.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">Goggles Admin</div>
+  <button id="logoutBtn">Logout</button>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <ul>
+      <li><a href="/admin/dashboard">Dashboard</a></li>
+      <li><a href="/admin/products">Products</a></li>
+      <li><a href="/admin/orders">Orders</a></li>
+    </ul>
+  </aside>
+
+  <main class="content">
+    <%- body %>   <!-- ✅ NOW IT WORKS -->
+  </main>
+</div>
+
+<script src="/public/js/admin.js"></script>
+</body>
+</html>

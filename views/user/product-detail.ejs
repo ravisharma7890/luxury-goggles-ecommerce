@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>
+        <%= product.name %> — GOGGLES®
+    </title>
+    <link rel="stylesheet" href="/public/css/user.css" />
+</head>
+
+<body>
+    <div class="page-wrap fade">
+
+    <header class="u-header">
+        <div class="logo">GOGGLES®</div>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/shop">Shop</a>
+            <a href="/cart" class="cart-link">
+                Cart
+                <span id="cartCount" class="cart-badge">0</span>
+            </a>
+        </nav>
+    </header>
+
+    <section class="pd-wrap">
+        <!-- LEFT: IMAGE -->
+        <div class="pd-image">
+            <img src="<%= product.image %>" alt="<%= product.name %>">
+        </div>
+
+        <!-- RIGHT: DETAILS -->
+        <div class="pd-info">
+            <h1>
+                <%= product.name %>
+            </h1>
+            <p class="pd-price">₹<%= product.price %>
+            </p>
+
+            <p class="pd-desc">
+                <%= product.description || "Precision-crafted eyewear with premium optics and timeless design." %>
+            </p>
+
+            <div class="pd-meta">
+                <span>Brand: <strong>
+                        <%= product.brand || "GOGGLES®" %>
+                    </strong></span>
+                <span>Category: <strong>
+                        <%= product.category || "Eyewear" %>
+                    </strong></span>
+            </div>
+
+            <div class="pd-actions">
+                <button class="btn-primary" onclick="addToCart(
+          <%= product.id %>,
+          '<%= product.name.replace(/'/g, " \\'") %>',
+                    <%= product.price %>
+                        )">
+                        Add to Cart
+                </button>
+            </div>
+
+            <p class="pd-note">Free shipping • 7-day returns</p>
+        </div>
+    </section>
+
+    <footer class="u-footer">
+        <p>© 2026 GOGGLES®. Crafted with precision.</p>
+    </footer>
+</div>
+    <script src="/public/js/user.js"></script>
+</body>
+
+</html>

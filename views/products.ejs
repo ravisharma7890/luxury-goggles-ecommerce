@@ -1,0 +1,27 @@
+<h1>Products</h1>
+
+<div class="top-bar">
+    <button id="addProductBtn" onclick="location.href='/admin/products/add'">
+        + Add Product
+    </button>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody id="productsTable">
+        <tr>
+            
+            <td colspan="5">Loading products...</td>
+        </tr>
+    </tbody>
+</table>
+
+<script src="/public/js/products.js"></script>

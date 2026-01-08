@@ -1,0 +1,30 @@
+<h1>Order Details</h1>
+
+<div class="order-card">
+  <h3>Order Summary</h3>
+  <p><strong>Order ID:</strong> <span id="orderId"></span></p>
+  <p><strong>Customer:</strong> <span id="customer"></span></p>
+  <p><strong>Email:</strong> <span id="email"></span></p>
+  <p><strong>Status:</strong> <span id="status"></span></p>
+  <p><strong>Total:</strong> ₹<span id="total"></span></p>
+</div>
+
+<div class="order-card">
+  <h3>Items</h3>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Qty</th>
+        <th>Subtotal</th>
+      </tr>
+    </thead>
+    <tbody id="itemsTable"></tbody>
+  </table>
+</div>
+
+<a href="/admin/orders" class="btn-secondary">← Back to Orders</a>
+
+<script src="/public/js/order-details.js"></script>

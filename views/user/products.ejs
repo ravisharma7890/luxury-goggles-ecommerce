@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Shop — GOGGLES®</title>
+    <link rel="stylesheet" href="/public/css/user.css" />
+</head>
+
+<body>
+<div class="page-wrap fade">
+  <!-- existing page content -->
+
+
+    <!-- HEADER (same as home) -->
+    <header class="u-header">
+        <div class="logo">GOGGLES®</div>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/shop" class="active">Shop</a>
+            <a href="/cart" class="cart-link">
+                Cart
+                <span id="cartCount" class="cart-badge">0</span>
+            </a>
+        </nav>
+    </header>
+
+    <!-- PAGE INTRO -->
+    <section class="shop-hero">
+        <h1>Eyewear Collection</h1>
+        <p>Designed to elevate how you see — and how you’re seen.</p>
+    </section>
+
+    <!-- PRODUCTS GRID -->
+    <section class="shop-section">
+        <div class="shop-grid">
+
+            <% products.forEach(p=> { %>
+                <a href="/product/<%= p.id %>" class="shop-card">
+                    <div class="shop-img">
+                        <img src="<%= p.image %>" alt="<%= p.name %>">
+                    </div>
+
+                    <div class="shop-info">
+                        <h3>
+                            <%= p.name %>
+                        </h3>
+                        <span>₹<%= p.price %></span>
+                    </div>
+                </a>
+                <% }) %>
+
+        </div>
+    </section>
+
+    <footer class="u-footer">
+        <p>© 2026 GOGGLES®. Crafted with precision.</p>
+    </footer>
+</div>
+</body>
+
+</html>
